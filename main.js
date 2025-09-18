@@ -112,27 +112,23 @@ if(you_age < 18 ){
 
 
 
-
 //chapter 9
 
 //for lop
 
-// for (let index = 0; index < 10; index++) {
-//      console.log(index)
+for (let index = 0; index < 10; index++) {
+     console.log(index)
      
-// }
+}
 
 
 // break and continue  
+ for (let i = 0; i <= 5; i) {
+     if(i===3){
+           continue
+     }
 
-//  for (let i = 0; i <= 5; i) {
-//      if(i===3){
-//            continue
-//      }
-
-//      console.log(i)
+     console.log("ello ")
      
-//  }
-
-
+ }
 
