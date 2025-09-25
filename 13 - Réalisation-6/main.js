@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 // chapter 13 Realisation 
   
 // creat list inside object;
@@ -70,9 +64,9 @@ for (let index = 0 ; index < list_with_objects.length ; index++ ) {
     // creat prompt to aske me which one code of this skills
     let My_promet = prompt(`Write code of this skilles ${ list_with_objects[random].skills }`);
     
-    // creat condition My_prompt if not write any code I print Message and break loop 
+    // creat condition My_prompt if not write any code I print Message and break loop ;
     if( My_promet === "" ){
-        console.log(`Please Add code Of this skills: ${ list_with_objects[random].skills }`);
+        alert(`Please Add code Of this skills: ${ list_with_objects[random].skills }`);
         break
       
     }
@@ -80,14 +74,14 @@ for (let index = 0 ; index < list_with_objects.length ; index++ ) {
     else if( My_promet === code ){
           
           score++;
-          console.log( `You Finding this Key is correct ${score}` );
+          alert( `You Finding this Key is correct ${score}` );
         
 
     }
     // condition 3 You Write any somthing don't similar code 
     else{
         
-        console.log( `Retry guessing the Code and you have ${score} score` );
+        alert( `Retry guessing the Code and you have ${score} score` );
         
     };
     
