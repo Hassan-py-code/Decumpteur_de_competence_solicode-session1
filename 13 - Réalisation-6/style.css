@@ -1,0 +1,16 @@
+
+
+
+
+p .code{
+     color: blue;
+     background-color: cadetblue;
+     padding: 5px;
+     margin: 10px;
+}
+
+p .skills{
+     color: #fff;
+     background-color: blueviolet;
+     margin: 8px;
+}
