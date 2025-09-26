@@ -6,54 +6,54 @@ let list_with_objects=[
     
     
      {
-        name:"Fatim", 
+
         skills:"Html & CSS & Node",
         code:"C1",
     },
 
      {
-        name:"Mohammed",
+        
         skills:"Python & PHP" ,
         code:"C2",
     },
     {
-        name:"ALi",
+       
         skills:"HTML & CSS & JS" , 
         code:"C3",
     },
      {
-        name:"Moukhtar",
+        
         skills:"React & tailwind",
         code:"C4",
     },
      {
-        name:"Zakaria",
+       
         skills:"HTML & CSS" ,
         code:"C5",
     },
      {
-        name:"Brahim",
+        
         skills:"HTML" ,
         code:"C6",
     },
      {
-        name:"Hamid",
+        
         skills:"JS & React Node" ,
         code:"C7",
     }, 
      {
-        name:"Selma",
+        
         skills:"Figma", 
         code:"C8",
     }, 
 ];
 
 // Creat function to  guessing;
- 
+
 function guessing_of_code(score = 0){
 
     // creat for loop 
-for (let index = 0 ; index < 2 ; index++ ) {
+for (let index = 0 ; index < list_with_objects.length ; index++ ) {
     
     // creat random choice in list_with_objects;
     let random = Math.floor( Math.random() * list_with_objects.length );
