@@ -53,7 +53,7 @@ let list_with_objects=[
 function guessing_of_code(score = 0){
 
     // creat for loop 
-for (let index = 0 ; index < list_with_objects.length ; index++ ) {
+for (let index = 0 ; index < 2 ; index++ ) {
     
     // creat random choice in list_with_objects;
     let random = Math.floor( Math.random() * list_with_objects.length );
@@ -62,26 +62,27 @@ for (let index = 0 ; index < list_with_objects.length ; index++ ) {
     let code = list_with_objects[random].code;
     
     // creat prompt to aske me which one code of this skills
-    let My_promet = prompt(`Write code of this skilles ${ list_with_objects[random].skills }`);
+    let My_promet = prompt(`Write code of this skilles ${ list_with_objects[random].skills } `);
     
     // creat condition My_prompt if not write any code I print Message and break loop ;
     if( My_promet === "" ){
         alert(`Please Add code Of this skills: ${ list_with_objects[random].skills }`);
-        break
-      
+        index--;
+        continue; 
+        
     }
     // condition 2 
     else if( My_promet === code ){
           
-          score++;
-          alert( `You Finding this Key is correct ${score}` );
-        
+        score++;
+        alert( `You Finding this Key is correct ${score}` );
+          
 
     }
     // condition 3 You Write any somthing don't similar code 
     else{
-        
-        alert( `Retry guessing the Code and you have ${score} score` );
+         
+        alert( `Retry guessing the Code and you have ${score} / ${list_with_objects.length}` );
         
     };
     
@@ -93,6 +94,5 @@ for (let index = 0 ; index < list_with_objects.length ; index++ ) {
 
 // call this function
 guessing_of_code();
-
 
 
