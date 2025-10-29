@@ -1,0 +1,100 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+:root {
+  --primary-color: #2E8B57;      /* Sea Green – main brand color (header, highlights) */
+  --secondary-color: #3A6EA5;    /* Steel Blue – footer, secondary buttons */
+  --accent-color: #F4A261;       /* Soft Orange – buttons, price, hover states */
+  --background-color: #F8F9FA;   /* Light background for pages */
+  --card-bg: #FFFFFF;            /* Card background (book cards) */
+  --text-color: #333333;         /* Main text */
+  --error-color: #E63946;        /* Red – unavailable or delete button */
+  --success-color: #2E8B57;      /* Same as primary – available books */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+}
+
+
+
+body{
+     background-color: var(--background-color);
+     font-family: "poppins",sans-serif;
+}
+
+.my-library{
+    background-color: var(--secondary-color);
+    padding: 10px;
+    
+}
+
+.my-library h1{
+     text-align: center;
+     color: #FFFFFF;
+}
+
+header{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     background-color: var(--accent-color);
+     padding: 10px;
+     border-bottom: 2px solid black;
+}
+
+
+header h2{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/*main content */
+
+.list-books{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1.5rem));
+    gap: 30px;
+    justify-content: center;
+}
+
+.books{
+     background-color: var(--card-bg);
+     padding: 20px;
+     border-left: 5px solid black;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     box-shadow: 0 5px 0 black;
+     transition: 0.3s ease-in-out;
+     cursor: pointer;
+}
+
+
+.books:hover{
+     transform: translateY(-10px);
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+}
+
+.form-group  #disponible {
+    width: 50%;
+    padding: 0.2rem 30px;
+    border: 2px solid black;
+}
+
+
+.btn button{
+    padding: 0.4rem  20px;
+    background-color: var(--error-color);
+    border: 2px solid black;
+    margin-top: 20px;
+    color: var(--card-bg);
+    cursor: pointer;
+
+}
