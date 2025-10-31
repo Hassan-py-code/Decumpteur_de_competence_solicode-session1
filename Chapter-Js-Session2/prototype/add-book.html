@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="index.html">
 </head>
 <body>
     
@@ -23,6 +25,34 @@
 
 
      <main>
+        
+          <!-- <section class="list-books"> -->
+
+              <!-- <div class="books">
+                 <p>Code : <span>2</span></p>
+                 <p>Title : <span>JavaScript: The Good Parts :</span></p>
+                 <p>author : <span>Douglas </span></p>
+                 <p>year : <span>2008 </span></p>
+                
+                <div class="form-group">
+                     <label for="disponible">Disponible : </label>
+                    <select  id="disponible">
+                        <option value="true">Oui</option>
+                        <option value="false">Non</option>
+                    </select>
+                </div>
+
+                 <p> price : <span>40</span>$</p>
+
+                 <div class="btn">
+                     <button>Remove Books</button>
+                 </div>
+
+              </div> -->
+
+          <!-- </section> -->
+        
+          
          <section>
               
         
@@ -32,7 +62,7 @@
          <form action="#" class="contact-form">
             <div class="form-group">
                 <label for="name" class="form-lable">Code</label>
-                <input type="text" id="code" class="form-input" required>
+                <input type="number" id="code" class="form-input" required>
                 
             </div>
 
@@ -55,22 +85,20 @@
             <div class="form-group">
                      <label for="disponible">Disponible : </label>
                     <select  id="disponible">
-                        <option value="true">Oui</option>
-                        <option value="false">Non</option>
+
+                        <option value="true"   class="oui" >Oui</option>
+                        <option value="false"  class="no" >Non</option>
                     </select>
-                </div>
+            </div>
 
                 <div class="form-group">
                 <label for="price" class="form-lable">Price</label>
                  <input type="text" id="price" class="form-input" required>
             </div>
 
-            <button type="button" class="submit-books">Add Books</button>
+            <button type="submit" class="submit-books">Add Books</button>
          </form>
        </div>
-
-
-
 
 
 
@@ -79,7 +107,7 @@
     
     
 
-     <script src="add_book.js"></script>
+     <script src="data.js"></script>
 
 </body>
 </html>
