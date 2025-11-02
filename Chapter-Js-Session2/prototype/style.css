@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     padding: 0;
@@ -42,30 +41,24 @@ body{
 header{
      display: flex;
      align-items: center;
-     justify-content: space-evenly;
+     justify-content: center;
+     gap: 20px;
      background-color: var(--accent-color);
-     padding: 10px;
+     padding: 20px;
      border-bottom: 2px solid black;
 }
 
-
-header h2{
-    padding: 10px;
-    border-radius: 5px;
-}
-
-header h2 a{
-     text-decoration: none;
-     color: black;
-}
-
-.Add-book h3 a{
-     color: black;
-     text-decoration: none;
+header #showCatalog,
+#showForm{
+    padding: 0.4rem  40px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--background-color);
+    color: var(--card-bg);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /*main content */
-
 .list-books{
     margin-top: 5%;
     display: grid;
@@ -79,25 +72,12 @@ header h2 a{
      padding: 20px;
      border-left: 5px solid black;
      border-top-left-radius: 10px;
-     border-top-right-radius: 10px;
      border-bottom-left-radius: 10px;
      box-shadow: 0 5px 0 black;
      transition: 0.3s ease-in-out;
      cursor: pointer;
-     
 }
 
-.books p{
-     font-weight: 700;
-}
-
-.books p span{
-    font-weight: 400;
-}
-
-.form-group label{
-    font-weight: 700;
-}
 
 .books:hover{
      transform: translateY(-10px);
@@ -110,7 +90,6 @@ header h2 a{
     border: 2px solid black;
 }
 
-
 .btn button{
     padding: 0.4rem  20px;
     background-color: var(--error-color);
@@ -118,28 +97,21 @@ header h2 a{
     margin-top: 20px;
     color: var(--card-bg);
     cursor: pointer;
-
 }
 
-
-/* footer */
-
 footer{
+
      display: flex;
      align-items: center;
      justify-content: space-evenly;
      background-color: var(--accent-color);
      padding: 20px;
      margin-top: 10%;
-}
 
-
-footer p{
-     font-weight: 600;
 }
 
 .Total-books,
-.total-aviable,
+.total-available,
 .price_of_book,
 .average_price{
      background-color: var(--background-color);
@@ -149,15 +121,13 @@ footer p{
 
 
 
-
-
 /* creat style design add-books */
 
-
-
 .contact{
+    margin-top: -4%;
     padding:5rem 5%;
     position: relative;
+    display: none;
 }
 
 .contact .contact-title{
@@ -184,8 +154,6 @@ footer p{
     font-size: 1rem;
     font-weight: 500;
     font-weight: 600;
-    /* border-bottom: 3px solid var(--accent-color);
-    width: fit-content; */
 }
 
 .form-input{

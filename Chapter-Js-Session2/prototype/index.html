@@ -13,53 +13,58 @@
      <h1> 👋 welcome to our Library Catalogue  </h1>
   </div>
 
-  <!-- header -->
-     <header>
-         <h2><a href="#">Catalogue</a></h2>
+      <header>
+      <button id="showCatalog"> Show Catalogue</button>
+      <button id="showForm"> Add Book </button>
+    </header>
 
-         <div class="Add-book">
-             <h3><a href="add-book.html">Add Books</a></h3>
-         </div>
-       
-         <div class="search">
-             <h3>Search Books</h3>
-         </div>
-     </header>
+       <main class="container" id="container"> 
 
-       <!-- main content -->
+          <section class="list-books"></section>
 
-       <main>
-
-          <section class="list-books">
-
-              <!-- <div class="books">
-                 <p>Code : <span>2</span></p>
-                 <p>Title : <span>JavaScript: The Good Parts :</span></p>
-                 <p>author : <span>Douglas </span></p>
-                 <p>year : <span>2008 </span></p>
-                
-                <div class="form-group">
-                     <label for="disponible">Disponible : </label>
-                    <select  id="disponible">
-                        <option value="true">Oui</option>
-                        <option value="false">Non</option>
-                    </select>
-                </div>
-
-                 <p> price : <span>40</span>$</p>
-
-                 <div class="btn">
-                     <button>Remove Books</button>
-                 </div>
-
-              </div> -->
-
-          </section>
- 
        </main>
+          <!-- add book in form  -->
+          <div class="contact" id="add_in_form">
+              <form action="#" class="contact-form">
+            <div class="form-group">
+                <label for="name" class="form-lable">Code</label>
+                <input type="number" id="code" class="form-input" required>
+                
+            </div>
 
-    
-    
+            <div class="form-group">
+                <label for="title" class="form-lable">Title</Table></label>
+                <input type="text" id="title" class="form-input" required>
+            </div>
+
+              <div class="form-group">
+                <label for="Author" class="form-lable">Author</label>
+                <input type="text" id="Author" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Years" class="form-lable">Years</label>
+                 <input type="text" id="Years" class="form-input" required>
+            </div>
+
+              
+            <div class="form-group">
+                     <label>
+                <input type="checkbox" id="available" > Available
+            </label>
+            </div>
+
+                <div class="form-group">
+                <label for="price" class="form-lable">Price</label>
+                 <input type="text" id="price" class="form-input" required>
+            </div>
+
+            <button type="submit" class="submit-books">Add Books</button>
+         </form>
+          </div>
+        
+
+          
        <footer>
 
           <div>
@@ -68,7 +73,7 @@
           </div>
 
           <div>
-              <p>Number of avaible books <span class="total-aviable">5</span></p>
+              <p>Number of avaible books <span class="total-available">0</span></p>
           </div>
 
           <div>
@@ -82,7 +87,8 @@
        </footer>
 
 
-       <script src="data.js"></script>
-   
+     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+     <script src="script.js"></script>
+
 </body>
 </html>
