@@ -30,6 +30,7 @@ body{
 .my-library{
     background-color: var(--secondary-color);
     padding: 10px;
+
     
 }
 
@@ -46,6 +47,7 @@ header{
      background-color: var(--accent-color);
      padding: 20px;
      border-bottom: 2px solid black;
+
 }
 
 header #showCatalog,
@@ -58,6 +60,19 @@ header #showCatalog,
     cursor: pointer;
 }
 
+.Search_input {
+    /* text-align: center; */
+    margin-top: 20px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.Search_input #searchInput{
+     padding: 0.4rem 80px;
+     border-radius: 10px;
+}
+
 /*main content */
 .list-books{
     margin-top: 5%;
@@ -67,6 +82,8 @@ header #showCatalog,
     justify-content: center;
 }
 
+
+/* chiled books */
 .books{
      background-color: var(--card-bg);
      padding: 20px;
@@ -107,6 +124,9 @@ footer{
      background-color: var(--accent-color);
      padding: 20px;
      margin-top: 10%;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
 
 }
 
@@ -117,6 +137,7 @@ footer{
      background-color: var(--background-color);
      padding: 0.4rem 40px;
      border-radius: 10px;
+     border: 2px solid var(--secondary-color);
 }
 
 
@@ -195,5 +216,5 @@ footer{
     color: var(--bg-color);
     box-shadow: 0 0 5px var(--text-color);
     transform: scale( 1.05);
-    
 }
+

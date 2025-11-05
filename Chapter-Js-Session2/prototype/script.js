@@ -1,3 +1,4 @@
+
 // Temporary in-memory database
 let library = [
   {
@@ -26,44 +27,41 @@ let library = [
   },
 ];
 
-// Available  book
-let total_available=document.querySelector(".total-available");
+// Select elements
 let list_books = document.querySelector(".list-books");
-let totla_books = document.querySelector(".Total-books");
-let clculation_books_price = document.querySelector(".price_of_book");
-let average_price = document.querySelector(".average_price");
 let formulaire = document.querySelector("form");
+let searchInput = document.getElementById("searchInput");
 
-
-
-function Add_books_in_catalog() {
+// ------MAIN DISPLAY FUNCTION-----
+function Add_books_in_catalog(books = library) {
   list_books.innerHTML = "";
-  
-  let Available =0;
-  let total = 0;
-  let count = library.length;
 
-  library.forEach((element, index) => {
+  let Available = 0;
+  let total = 0;
+  let count = books.length;
+
+  books.forEach((element, index) => {
     let div = document.createElement("div");
     div.classList.add("books");
+    
     div.innerHTML = `
       <p>Code: ${element.code}</p>
-      <p>Title: 📘 ${element.title}</p>
-      <p>Author:🧛‍♀️ ${element.author}</p>
-      <p>Year: 📅 ${element.year}</p>
+      <p> 📘Title : ${element.title}</p>
+      <p> 🧛‍♀️Author: ${element.author}</p>
+      <p> 📅 Year:  ${element.year}</p>
       <p>Available: ${element.available ? "✅" : "❌"} </p> 
-      <p>Price: 💰 ${element.price}$</p>
-       <div class="btn">
-         <button>Remove Books</button>
-    </div>
+      <p> 💰Price:  ${element.price}$</p>
+      <div class="btn">
+        <button>Remove Books</button>
+      </div>
     `;
- 
-   
+
     list_books.appendChild(div);
     total += Number(element.price);
     Available += Number(element.available);
-
-      div.querySelector(".btn").addEventListener("click", () => {
+    
+    // Delete button
+    div.querySelector(".btn").addEventListener("click", () => {
       let confirmDelete = confirm("Do you want to remove this book?");
       if (confirmDelete) {
         library.splice(index, 1);
@@ -71,54 +69,67 @@ function Add_books_in_catalog() {
       }
     });
   });
-
-  totla_books.textContent = count;
-  clculation_books_price.textContent = total.toFixed(2);
-  average_price.textContent = (total / count).toFixed(2) ;
-  total_available.textContent=Available;
+  // ----Add this result in browser-----
+   document.querySelector(".Total-books").textContent = count;
+   document.querySelector(".price_of_book").textContent = total.toFixed(2);
+   document.querySelector(".total-available").textContent = Available;
 }
 
 
-const jsConfetti = new JSConfetti();
+//----- SEARCH FUNCTION ------ 
+function searchBook() {
+  let query = searchInput.value.toLowerCase().trim();
+  
+  // Filter by title (you can also include )
+  let filteredBooks = library.filter((book) =>
+      book.title.toLowerCase().includes(query)
+  );
 
+  // Update the list
+  Add_books_in_catalog(filteredBooks);
+}
+
+
+//  ----FORM SUBMIT: ADD BOOK -----
 formulaire.addEventListener("submit", (event) => {
-
   event.preventDefault();
 
   let newBook = {
-    code: document.querySelector("#code").value,
+    code: Number(document.querySelector("#code").value),
     title: document.querySelector("#title").value,
     author: document.querySelector("#Author").value,
     year: document.querySelector("#Years").value,
-    price: document.querySelector("#price").value,
+    price: Number(document.querySelector("#price").value),
     available: document.getElementById("available").checked,
   };
 
   library.push(newBook);
-  alert(" ✅ Book added successfully!");
+  alert("✅ Book added successfully!");
   Add_books_in_catalog();
   formulaire.reset();
-
-  jsConfetti.addConfetti({
-        confettiRadius: 6,
-        confettiNumber: 500,
-    });
 
   // Switch back to catalogue view
   document.getElementById("add_in_form").style.display = "none";
   document.getElementById("container").style.display = "block";
+ 
 });
 
-// Show/Hide sections
+
 document.getElementById("showForm").addEventListener("click", () => {
   document.getElementById("add_in_form").style.display = "block";
   document.getElementById("container").style.display = "none";
+   document.getElementById("searchInput").style.display="none";
 });
+
 
 document.getElementById("showCatalog").addEventListener("click", () => {
   document.getElementById("add_in_form").style.display = "none";
   document.getElementById("container").style.display = "block";
+  document.getElementById("searchInput").style.display="block";
 });
 
-// Display initial books
+
+searchInput.addEventListener("keyup",searchBook);
+
+
 Add_books_in_catalog();

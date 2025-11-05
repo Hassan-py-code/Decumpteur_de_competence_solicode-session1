@@ -12,18 +12,26 @@
   <div class="my-library">
      <h1> 👋 welcome to our Library Catalogue  </h1>
   </div>
-
-      <header>
+      
+    <header>
       <button id="showCatalog"> Show Catalogue</button>
       <button id="showForm"> Add Book </button>
     </header>
 
+
+     <div class="Search_input">
+         <input type="text" id="searchInput" placeholder= "🔍 Search book by title...">
+     </div>
+
        <main class="container" id="container"> 
 
-          <section class="list-books"></section>
+          <section class="list-books">
+              
+          </section>
 
        </main>
-          <!-- add book in form  -->
+
+         <!-- add book in form  -->
           <div class="contact" id="add_in_form">
               <form action="#" class="contact-form">
             <div class="form-group">
@@ -62,7 +70,7 @@
             <button type="submit" class="submit-books">Add Books</button>
          </form>
           </div>
-        
+          
 
           
        <footer>
@@ -80,14 +88,10 @@
              <p>Total is book <span class="price_of_book">0</span></p>
           </div>
 
-             <div>
-                  <p>Average price <span class="average_price">0</span></p>
-             </div>
-
+            
        </footer>
-
-
-     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+       
+       
      <script src="script.js"></script>
 
 </body>
