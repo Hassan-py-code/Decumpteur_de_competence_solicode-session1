@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library_Hassan</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-  
-
-
-  <div class="my-library">
+   <div class="my-library">
      <h1> 👋 welcome to our Library Catalogue  </h1>
   </div>
       
@@ -19,10 +18,13 @@
       <button id="showForm"> Add Book </button>
     </header>
 
-
-     <div class="Search_input">
-         <input type="text" id="searchInput" placeholder= "🔍 Search book by title...">
-     </div>
+    
+    <div class="Search_input">
+      <input type="text" id="searchInput" placeholder= "🔍 Search book by title...">
+      <button type="button" class="sort">A-Z</button>
+           
+     </div>  
+      
 
        <main class="container" id="container"> 
 
@@ -33,13 +35,13 @@
        </main>
 
          <!-- add book in form  -->
-          <div class="contact" id="add_in_form">
-              <form action="#" class="contact-form">
-            <div class="form-group">
-                <label for="name" class="form-lable">Code</label>
-                <input type="number" id="code" class="form-input" required>
-                
-            </div>
+        <div  id="add_in_form">
+          <form action="#" class="form">
+
+          <div class="form-group">
+              <label for="name" class="form-lable">Code</label>
+              <input type="number" id="code" class="form-input" required>
+          </div>
 
             <div class="form-group">
                 <label for="title" class="form-lable">Title</Table></label>
@@ -58,11 +60,11 @@
 
               
             <div class="form-group">
-                     <label>
+              <label>
                 <input type="checkbox" id="available" > Available
-            </label>
+             </label>
             </div>
-
+  
                 <div class="form-group">
                 <label for="price" class="form-lable">Price</label>
                  <input type="text" id="price" class="form-input" required>
@@ -74,26 +76,32 @@
           
 
           
-       <footer>
+       <div class="manage_books">
 
+           <!-- Creat p to add totla number of book -->
           <div>
              <p>Total number of books <span class="Total-books">0</span></p>
                
           </div>
-
+            
+           <!-- Creat p to manage Available  book-->
           <div>
               <p>Number of avaible books <span class="total-available">0</span></p>
           </div>
-
+            
+          <!-- Total of price book in library  -->
           <div>
              <p>Total is book <span class="price_of_book">0</span></p>
           </div>
-
             
-       </footer>
+        </div>
+
+        <!-- Expensive book in library -->
+          <div class="expensive_div">
+              <p class="book_expensive">Most expensive book: <span id="expensive_Book">0</span> </p>
+          </div>
        
-       
-     <script src="script.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
