@@ -200,36 +200,3 @@ document.getElementById("showCatalog").addEventListener("click", () => {
 
 //call this  function
 Add_books_in_catalog();
-
-
-
-let list=["A","d","e","O","M","Z","X","Q","F","C","b"];
-
-let number=["2","4","7","9","1","3","10","5","6"]
-
-let list_sort=number.sort((a,b)=>
-     a-b   // add number 0 from 100
-     //b-a  // abb number 100 from 0
-
-);
-
-// console.log(list_sort);
-
-
-let people =[
-  {name:"Hassan",age:20,gap:1.2},
-  {name:"bro",age:12,gap:1},
-  {name:"aaid",age:21,gap:3},
-]
-
-
-let people_sor=people.sort((a,b)=>
-    //  b.age - a.age
-
-  //  a.name.localeCompare(b.name)
-  a.name - b.name
-)
-
-console.log(people_sor)
-
-
